@@ -11,10 +11,8 @@ services:
     entrypoint: /usr/local/share/docker-init.sh
     command: sleep infinity
     user: vscode
-    depends_on:
-      - ganache
   ganache:
     image: trufflesuite/ganache:latest
     ports:
-      - "7545:8545"
+      - "8545:8545"
     command: --port 8545
